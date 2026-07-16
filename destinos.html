@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Descubre seis destinos extraordinarios de España y diseña un viaje completamente a medida."
+    />
+    <meta name="theme-color" content="#02050a" />
+    <meta property="og:title" content="Destinos extraordinarios | En Órbita" />
+    <meta
+      property="og:description"
+      content="Ciudades, islas y costas de España que parecen de otro planeta."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%2302050a'/%3E%3Ccircle cx='32' cy='32' r='15' fill='none' stroke='%239fc7ff' stroke-width='3'/%3E%3Cpath d='M9 38c13 4 33 0 46-12' fill='none' stroke='%23f6f8fb' stroke-width='3'/%3E%3C/svg%3E"
+    />
+    <title>Destinos que parecen de otro planeta | En Órbita</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body class="destinations-page">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="En Órbita, volver al inicio">
+        <span>en</span><i aria-hidden="true"></i><strong>órbita</strong>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="main-nav"
+        data-menu-toggle
+      >
+        <span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal" data-nav>
+        <a href="destinos.html" aria-current="page">Destinos</a>
+        <a href="index.html#experiencias">Experiencias</a>
+        <a href="index.html#nosotros">Nuestra misión</a>
+      </nav>
+
+      <a class="header-cta" href="#planificar">Diseña tu viaje</a>
+    </header>
+
+    <main id="contenido">
+      <section class="destinations-hero" aria-labelledby="destinations-hero-title">
+        <video
+          class="section-media destinations-hero-media"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          aria-hidden="true"
+        >
+          <source src="assets/videos/TIERRA%20ANIMADO.mp4" type="video/mp4" />
+        </video>
+        <div class="destinations-hero-shade" aria-hidden="true"></div>
+        <div class="grid-lines" aria-hidden="true"></div>
+
+        <div class="shell destinations-hero-content">
+          <div class="destinations-title-wrap reveal">
+            <p class="eyebrow">Catálogo de coordenadas · España</p>
+            <h1 id="destinations-hero-title">
+              Destinos que parecen<br />de otro planeta
+            </h1>
+            <p>
+              Seis formas de mirar España desde una perspectiva completamente nueva.
+            </p>
+          </div>
+
+          <div class="hero-mission-data reveal" aria-hidden="true">
+            <span>ÓRBITA 02</span>
+            <strong>6 coordenadas</strong>
+            <small>Península · archipiélagos</small>
+          </div>
+        </div>
+
+        <a class="explore-button" href="#seleccion" aria-label="Ver destinos destacados">
+          <span>Descubre</span><b aria-hidden="true">↓</b>
+        </a>
+      </section>
+
+      <section class="destinations-intro" aria-labelledby="intro-title">
+        <div class="shell destinations-intro-grid">
+          <p class="section-number reveal">01 / El viaje empieza aquí</p>
+          <div class="reveal">
+            <h2 id="intro-title">España contiene<br /><span>muchos universos.</span></h2>
+            <p>
+              Viajar por España es cambiar de paisaje, idioma, luz y sabor en apenas
+              unas horas. Desde la energía de sus grandes ciudades hasta islas nacidas
+              del fuego y costas abiertas al Mediterráneo, cada destino propone una
+              manera distinta de sentir el viaje.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="destination-selection" id="seleccion" aria-labelledby="selection-title">
+        <div class="shell selection-heading reveal">
+          <div>
+            <p class="eyebrow">Destinos destacados</p>
+            <h2 id="selection-title">Elige tu próxima órbita</h2>
+          </div>
+          <p>
+            Cada coordenada es un punto de partida. Diseñaremos el recorrido alrededor
+            de tu ritmo, tus intereses y el tiempo del que dispones.
+          </p>
+        </div>
+
+        <div class="shell destination-grid">
+          <article class="destination-card destination-seville reveal">
+            <div class="card-visual" aria-hidden="true"><span>37.3891° N</span><b>01</b></div>
+            <div class="card-copy">
+              <p class="card-region">Andalucía · Sur</p>
+              <h3>Sevilla</h3>
+              <p>
+                Patios en sombra, azahar y una ciudad monumental que convierte cada
+                paseo en una escena de cine.
+              </p>
+              <a class="destination-link" href="#planificar" aria-label="Ver destino Sevilla">
+                Ver destino <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="destination-card destination-madrid reveal">
+            <div class="card-visual" aria-hidden="true"><span>40.4168° N</span><b>02</b></div>
+            <div class="card-copy">
+              <p class="card-region">Centro · Capital</p>
+              <h3>Madrid</h3>
+              <p>
+                Arte, barrios con carácter y mesas que alargan la noche en una capital
+                inquieta, abierta y luminosa.
+              </p>
+              <a class="destination-link" href="#planificar" aria-label="Ver destino Madrid">
+                Ver destino <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="destination-card destination-barcelona reveal">
+            <div class="card-visual" aria-hidden="true"><span>41.3874° N</span><b>03</b></div>
+            <div class="card-copy">
+              <p class="card-region">Cataluña · Mediterráneo</p>
+              <h3>Barcelona</h3>
+              <p>
+                Arquitectura imposible, diseño y mar: una ciudad donde la vanguardia
+                convive con siglos de historia.
+              </p>
+              <a class="destination-link" href="#planificar" aria-label="Ver destino Barcelona">
+                Ver destino <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="destination-card destination-canarias reveal">
+            <div class="card-visual" aria-hidden="true"><span>28.2916° N</span><b>04</b></div>
+            <div class="card-copy">
+              <p class="card-region">Atlántico · Volcanes</p>
+              <h3>Islas Canarias</h3>
+              <p>
+                Volcanes, laurisilva y cielos limpios en un archipiélago que parece
+                diseñado para explorar otros mundos.
+              </p>
+              <a class="destination-link" href="#planificar" aria-label="Ver destino Islas Canarias">
+                Ver destino <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="destination-card destination-baleares reveal">
+            <div class="card-visual" aria-hidden="true"><span>39.5342° N</span><b>05</b></div>
+            <div class="card-copy">
+              <p class="card-region">Mediterráneo · Islas</p>
+              <h3>Islas Baleares</h3>
+              <p>
+                Calas minerales, caminos entre pinos y pueblos blancos donde el tiempo
+                adopta el ritmo pausado del mar.
+              </p>
+              <a class="destination-link" href="#planificar" aria-label="Ver destino Islas Baleares">
+                Ver destino <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="destination-card destination-costa reveal">
+            <div class="card-visual" aria-hidden="true"><span>36.7213° N</span><b>06</b></div>
+            <div class="card-copy">
+              <p class="card-region">Andalucía · Mediterráneo</p>
+              <h3>Costa del Sol</h3>
+              <p>
+                Horizontes dorados, pueblos entre montañas y una costa que combina
+                calma, cultura y gastronomía.
+              </p>
+              <a class="destination-link" href="#planificar" aria-label="Ver destino Costa del Sol">
+                Ver destino <span>↗</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="destinations-cta" id="planificar" aria-labelledby="plan-title">
+        <div class="destinations-cta-bg" aria-hidden="true"></div>
+        <div class="shell destinations-cta-inner reveal">
+          <p class="eyebrow">Tu misión comienza aquí</p>
+          <h2 id="plan-title">Diseñamos tu viaje<br />a medida</h2>
+          <p>
+            Cuéntanos qué te inspira y transformaremos tus ideas en una ruta única por España.
+          </p>
+          <a class="primary-button primary-button-light" href="mailto:hola@enorbita.es?subject=Quiero%20planificar%20mi%20viaje">
+            Planificar viaje <span>↗</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-row">
+        <a class="brand" href="index.html" aria-label="En Órbita, volver al inicio">
+          <span>en</span><i aria-hidden="true"></i><strong>órbita</strong>
+        </a>
+        <p>Viajes extraordinarios por España.</p>
+        <p>© <span data-year></span> En Órbita</p>
+      </div>
+    </footer>
+  </body>
+</html>

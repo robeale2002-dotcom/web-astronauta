@@ -130,7 +130,7 @@ h1 {
 .data-south { bottom: 14%; right: 20%; }
 
 .experiences { position: relative; min-height: 860px; overflow: hidden; background: #020712; }
-.experience-bg { position: absolute; inset: 0; background: url("magnific_separa-la-seccion-final-y_wPlNQhU7EI.png") center/cover no-repeat; }
+.experience-bg { position: absolute; inset: 0; background: url("../assets/images/magnific_separa-la-seccion-final-y_wPlNQhU7EI.png") center/cover no-repeat; }
 .experience-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,3,10,.45), rgba(0,4,12,.02) 50%, rgba(0,3,10,.46)), linear-gradient(0deg, #02050a 0%, transparent 35%, #010204 100%); }
 .experience-orbit { position: absolute; width: 52vw; aspect-ratio: 1; right: -22vw; bottom: -30vw; border: 1px solid rgba(160,202,255,.2); border-radius: 50%; box-shadow: 0 0 80px rgba(74,135,219,.16); }
 .experience-layout { position: relative; min-height: 860px; display: grid; grid-template-columns: 1fr 1.6fr; align-items: end; padding-bottom: 10vh; }
@@ -165,6 +165,116 @@ h1 {
 .footer-row { display: flex; justify-content: space-between; align-items: center; gap: 2rem; }
 .footer-row p { margin: 0; color: #6f7b89; font-size: .62rem; }
 
+/* Destinos — página interior */
+.main-nav a[aria-current="page"]::after { right: 0; }
+.destinations-hero {
+  position: relative; min-height: max(720px, 92svh); overflow: hidden; background: #020712;
+}
+.destinations-hero-media { object-position: center 46%; transform: scale(1.04); }
+.destinations-hero-shade {
+  position: absolute; inset: 0; background:
+    linear-gradient(90deg, rgba(0,4,10,.88) 0%, rgba(0,4,10,.32) 48%, rgba(0,4,10,.58) 100%),
+    linear-gradient(0deg, #02050a 0%, transparent 38%, rgba(0,0,0,.18) 100%);
+}
+.destinations-hero-content {
+  position: relative; min-height: max(720px, 92svh); display: flex; align-items: center;
+  padding-top: 6rem;
+}
+.destinations-title-wrap { position: relative; z-index: 2; max-width: 69rem; }
+.destinations-title-wrap h1 {
+  margin-bottom: 1.8rem; font-size: clamp(4rem, 7.5vw, 8.2rem); line-height: .86;
+}
+.destinations-title-wrap > p:last-child {
+  max-width: 26rem; color: #b7c2d0; font-size: clamp(.78rem, 1vw, .95rem); line-height: 1.65;
+}
+.hero-mission-data {
+  position: absolute; z-index: 2; right: 0; bottom: 13%; display: grid; gap: .3rem;
+  padding-left: 5rem; border-top: 1px solid rgba(255,255,255,.38); padding-top: .8rem;
+  text-align: right;
+}
+.hero-mission-data span, .hero-mission-data small {
+  color: var(--muted); font-size: .55rem; letter-spacing: .11em; text-transform: uppercase;
+}
+.hero-mission-data strong { font-size: 1.2rem; font-weight: 300; }
+.destinations-intro { padding: clamp(7rem, 12vw, 11rem) 0; background: var(--white); color: #0b111a; }
+.destinations-intro-grid { display: grid; grid-template-columns: 1fr 2.2fr; gap: 3rem; }
+.destinations-intro h2 {
+  margin-bottom: 3rem; font-size: clamp(3rem, 6vw, 6.5rem); font-weight: 300;
+  line-height: .92; letter-spacing: -.065em;
+}
+.destinations-intro h2 span { color: #8490a0; }
+.destinations-intro-grid > div > p {
+  width: min(42rem, 100%); margin-left: auto; color: #4d5967; font-size: clamp(.9rem, 1.3vw, 1.1rem); line-height: 1.75;
+}
+.destination-selection { position: relative; padding: clamp(7rem, 11vw, 10rem) 0; overflow: hidden; background: #02050a; }
+.destination-selection::before {
+  content: ""; position: absolute; top: 8rem; left: 50%; width: 75vw; aspect-ratio: 1;
+  transform: translateX(-50%); border: 1px solid rgba(128,176,237,.08); border-radius: 50%;
+  box-shadow: 0 0 160px rgba(51,102,169,.07);
+}
+.selection-heading {
+  position: relative; display: grid; grid-template-columns: 1.5fr 1fr; align-items: end;
+  gap: 5rem; margin-bottom: clamp(4rem, 7vw, 7rem);
+}
+.selection-heading h2 {
+  margin: 0; font-size: clamp(3rem, 5.5vw, 6rem); font-weight: 300; line-height: .95; letter-spacing: -.06em;
+}
+.selection-heading > p { margin: 0; color: #909dac; font-size: .82rem; line-height: 1.7; }
+.destination-grid { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.destination-card {
+  min-height: 34rem; display: grid; grid-template-columns: .8fr 1.2fr; overflow: hidden;
+  border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(5,10,18,.62);
+  transition: background .45s var(--ease);
+}
+.destination-card:hover { background: rgba(12,23,39,.9); }
+.card-visual {
+  position: relative; min-height: 100%; overflow: hidden; border-right: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 48% 47%, rgba(127,181,248,.62) 0 3%, transparent 4%),
+    radial-gradient(circle at 50% 50%, rgba(48,111,192,.7) 0 19%, rgba(15,42,75,.68) 20% 27%, transparent 28%),
+    repeating-radial-gradient(circle at 50% 50%, transparent 0 2.5rem, rgba(157,199,255,.12) 2.55rem 2.6rem),
+    linear-gradient(145deg, #07101c, #010204);
+}
+.card-visual::before {
+  content: ""; position: absolute; width: 11rem; aspect-ratio: 1; left: 50%; top: 50%;
+  transform: translate(-50%, -50%) rotate(-24deg); border: 1px solid rgba(179,213,255,.38); border-radius: 50%;
+}
+.card-visual::after {
+  content: ""; position: absolute; width: 5px; aspect-ratio: 1; left: 22%; top: 37%;
+  border-radius: 50%; background: #e7f2ff; box-shadow: 0 0 15px 4px var(--glow);
+}
+.card-visual span { position: absolute; left: 1.2rem; bottom: 1.2rem; color: #718096; font-size: .5rem; letter-spacing: .12em; }
+.card-visual b { position: absolute; top: 1.2rem; right: 1.2rem; color: rgba(255,255,255,.5); font-size: .58rem; font-weight: 400; }
+.destination-madrid .card-visual { filter: hue-rotate(25deg); }
+.destination-barcelona .card-visual { filter: hue-rotate(335deg) saturate(.8); }
+.destination-canarias .card-visual { filter: hue-rotate(170deg) saturate(.7); }
+.destination-baleares .card-visual { filter: hue-rotate(315deg) brightness(1.08); }
+.destination-costa .card-visual { filter: hue-rotate(190deg) saturate(.55) brightness(1.12); }
+.card-copy { display: flex; flex-direction: column; align-items: flex-start; padding: clamp(2rem, 3vw, 3.6rem); }
+.card-region { color: #758397; font-size: .55rem; letter-spacing: .12em; text-transform: uppercase; }
+.card-copy h3 { margin: auto 0 1.3rem; font-size: clamp(2rem, 3vw, 3.5rem); font-weight: 300; letter-spacing: -.06em; }
+.card-copy > p:not(.card-region) { color: #9eabba; font-size: .78rem; line-height: 1.65; }
+.destination-link {
+  display: inline-flex; justify-content: space-between; gap: 2.5rem; min-width: 9rem; margin-top: 1.5rem;
+  padding-bottom: .55rem; border-bottom: 1px solid rgba(255,255,255,.5); font-size: .68rem;
+}
+.destination-link span { transition: transform .3s var(--ease); }
+.destination-link:hover span { transform: translate(.25rem, -.25rem); }
+.destinations-cta {
+  position: relative; min-height: 760px; display: grid; place-items: center; overflow: hidden;
+  background: #020712; text-align: center;
+}
+.destinations-cta-bg {
+  position: absolute; inset: 0; background:
+    linear-gradient(0deg, rgba(2,5,10,.94), rgba(2,5,10,.08) 52%, rgba(2,5,10,.86)),
+    url("../assets/images/magnific_separa-la-seccion-final-y_wPlNQhU7EI.png") center/cover no-repeat;
+}
+.destinations-cta-inner { position: relative; }
+.destinations-cta h2 {
+  margin-bottom: 1.5rem; font-size: clamp(3.2rem, 7vw, 7.2rem); font-weight: 300; line-height: .9; letter-spacing: -.07em;
+}
+.destinations-cta-inner > p:not(.eyebrow) { max-width: 33rem; margin-inline: auto; color: #afbac7; font-size: .85rem; line-height: 1.7; }
+
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
 .reveal.is-visible { opacity: 1; transform: none; }
 @keyframes drift { 0%,100% { transform: translateY(-2px); } 50% { transform: translateY(4px); } }
@@ -185,6 +295,8 @@ h1 {
   .data-west { left: 3%; }
   .data-east { right: 3%; }
   .experience-layout { grid-template-columns: .7fr 1.5fr; }
+  .destination-grid { grid-template-columns: 1fr; }
+  .destination-card { min-height: 29rem; }
 }
 
 @media (max-width: 640px) {
@@ -226,6 +338,31 @@ h1 {
   .mission-copy { display: block; }
   .mission-copy ul { margin-top: 3rem; }
   .footer-row { align-items: flex-start; flex-direction: column; }
+  .destinations-hero, .destinations-hero-content { min-height: 760px; }
+  .destinations-hero-media { object-position: 58% center; }
+  .destinations-hero-shade { background: linear-gradient(180deg, rgba(0,4,10,.68), rgba(0,4,10,.12) 43%, #02050a 96%); }
+  .destinations-hero-content { align-items: flex-start; padding-top: 9.5rem; }
+  .destinations-title-wrap h1 { font-size: clamp(3.4rem, 16vw, 4.6rem); line-height: .88; }
+  .destinations-title-wrap h1 br { display: none; }
+  .hero-mission-data { right: 0; bottom: 15%; padding-left: 2.8rem; }
+  .destinations-hero .explore-button { right: auto; left: 6vw; bottom: 5%; }
+  .destinations-intro-grid { display: block; }
+  .destinations-intro h2 { margin: 3rem 0 2rem; }
+  .destinations-intro-grid > div > p { margin-left: 0; }
+  .selection-heading { display: block; }
+  .selection-heading > p { margin-top: 2rem; }
+  .destination-grid { width: 100%; border-left: 0; }
+  .destination-card { min-height: 31rem; grid-template-columns: 42% 58%; }
+  .card-copy { padding: 1.6rem; }
+  .card-copy h3 { font-size: 2.25rem; }
+  .card-visual::before { width: 8rem; }
+  .destinations-cta { min-height: 680px; }
+}
+
+@media (max-width: 420px) {
+  .destination-card { min-height: 36rem; grid-template-columns: 1fr; }
+  .card-visual { min-height: 13rem; border-right: 0; border-bottom: 1px solid var(--line); }
+  .card-copy h3 { margin-top: 2.5rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
