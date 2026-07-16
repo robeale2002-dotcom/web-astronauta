@@ -170,11 +170,12 @@ h1 {
 .destinations-hero {
   position: relative; min-height: max(720px, 92svh); overflow: hidden; background: #020712;
 }
-.destinations-hero-media { object-position: center 46%; transform: scale(1.04); }
+.destinations-hero-media { object-position: center 46%; transform: scale(1.04); pointer-events: none; }
 .destinations-hero-shade {
   position: absolute; inset: 0; background:
     linear-gradient(90deg, rgba(0,4,10,.88) 0%, rgba(0,4,10,.32) 48%, rgba(0,4,10,.58) 100%),
     linear-gradient(0deg, #02050a 0%, transparent 38%, rgba(0,0,0,.18) 100%);
+  pointer-events: none;
 }
 .destinations-hero-content {
   position: relative; min-height: max(720px, 92svh); display: flex; align-items: center;
