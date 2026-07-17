@@ -183,7 +183,7 @@ h1 {
 }
 .destinations-title-wrap { position: relative; z-index: 2; max-width: 69rem; }
 .destinations-title-wrap h1 {
-  margin-bottom: 1.8rem; font-size: clamp(4rem, 7.5vw, 8.2rem); line-height: .86;
+  margin-bottom: 1.8rem; font-size: clamp(4rem, 7.5vw, 8.2rem); line-height: .97;
 }
 .destinations-title-wrap > p:last-child {
   max-width: 26rem; color: #b7c2d0; font-size: clamp(.78rem, 1vw, .95rem); line-height: 1.65;
@@ -343,8 +343,7 @@ h1 {
   .destinations-hero-media { object-position: 58% center; }
   .destinations-hero-shade { background: linear-gradient(180deg, rgba(0,4,10,.68), rgba(0,4,10,.12) 43%, #02050a 96%); }
   .destinations-hero-content { align-items: flex-start; padding-top: 9.5rem; }
-  .destinations-title-wrap h1 { font-size: clamp(3.4rem, 16vw, 4.6rem); line-height: .88; }
-  .destinations-title-wrap h1 br { display: none; }
+  .destinations-title-wrap h1 { font-size: clamp(3.4rem, 16vw, 4.6rem); line-height: 1; }
   .hero-mission-data { right: 0; bottom: 15%; padding-left: 2.8rem; }
   .destinations-hero .explore-button { right: auto; left: 6vw; bottom: 5%; }
   .destinations-intro-grid { display: block; }
@@ -369,4 +368,158 @@ h1 {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+
+/* En Órbita Play — catálogo audiovisual */
+.video-platform-page { background: #02050a; }
+.video-platform-page .site-header { border-bottom-color: rgba(191,216,248,.14); }
+.video-platform-page .main-nav a[aria-current="page"] { color: var(--blue); }
+.stream-hero {
+  position: relative; min-height: max(760px, 100svh); display: flex; align-items: flex-end;
+  overflow: hidden; isolation: isolate; background: #030812;
+}
+.stream-hero-image {
+  position: absolute; z-index: -3; inset: 0;
+  background: #030812 url("../assets/images/video-catalog/hero-costa.jpg") 62% center/cover no-repeat;
+  transform: scale(1.015); animation: stream-drift 18s ease-in-out infinite alternate;
+}
+.stream-hero-overlay {
+  position: absolute; z-index: -2; inset: 0; pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(2,5,10,.94) 0%, rgba(2,5,10,.73) 34%, rgba(2,5,10,.13) 70%, rgba(2,5,10,.28) 100%),
+    linear-gradient(0deg, #02050a 0%, rgba(2,5,10,.22) 35%, rgba(2,5,10,.2) 100%);
+}
+.stream-stars {
+  position: absolute; z-index: -1; inset: 84px 5vw 0; opacity: .34; pointer-events: none;
+  background:
+    repeating-linear-gradient(90deg, rgba(173,206,246,.15) 0 1px, transparent 1px calc(100% / 6)),
+    radial-gradient(circle at 22% 24%, var(--blue) 0 1px, transparent 2px),
+    radial-gradient(circle at 78% 42%, var(--blue) 0 1px, transparent 2px);
+}
+.stream-hero-content { position: relative; padding-bottom: clamp(6rem, 12vh, 9rem); }
+.video-home-return {
+  display: inline-flex; align-items: center; gap: .7rem; margin-bottom: clamp(3rem, 7vh, 5.5rem);
+  color: #aab7c7; font-size: .62rem; letter-spacing: .08em; text-transform: uppercase;
+}
+.video-home-return span { color: var(--blue); font-size: 1rem; transition: transform .3s var(--ease); }
+.video-home-return:hover span { transform: translateX(-.25rem); }
+.stream-label { display: flex; align-items: center; gap: .65rem; margin-bottom: .9rem; color: #c7d4e5; font-size: .62rem; letter-spacing: .17em; text-transform: uppercase; }
+.stream-label span { width: 1.4rem; height: 1px; background: var(--blue); box-shadow: 0 0 12px var(--glow); }
+.stream-hero h1 {
+  max-width: 60rem; margin-bottom: 1.35rem; font-size: clamp(4rem, 7.2vw, 7.8rem);
+  line-height: .86; letter-spacing: -.07em;
+}
+.stream-meta { display: flex; align-items: center; flex-wrap: wrap; gap: .65rem 1rem; margin-bottom: 1.15rem; color: #c5cfdb; font-size: .65rem; }
+.quality-badge { padding: .16rem .38rem; border: 1px solid rgba(255,255,255,.45); border-radius: 2px; font-size: .55rem; letter-spacing: .08em; }
+.stream-description { max-width: 34rem; margin-bottom: 1.6rem; color: #c4cedb; font-size: clamp(.8rem, 1vw, .95rem); line-height: 1.65; }
+.stream-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+.stream-button {
+  min-height: 46px; display: inline-flex; align-items: center; justify-content: center; gap: .7rem;
+  padding: 0 1.35rem; border: 1px solid transparent; border-radius: 3px; cursor: pointer;
+  font: inherit; font-size: .68rem; font-weight: 600; letter-spacing: .035em; transition: transform .3s var(--ease), background .3s, color .3s, border-color .3s;
+}
+.stream-button:hover { transform: translateY(-2px); }
+.stream-button-primary { color: #06101b; background: #e9f3ff; }
+.stream-button-primary:hover { background: var(--blue); }
+.stream-button-secondary { color: var(--white); border-color: rgba(193,215,243,.26); background: rgba(16,28,44,.58); backdrop-filter: blur(12px); }
+.stream-button-secondary:hover { border-color: var(--blue); background: rgba(28,52,82,.75); }
+.stream-hero-index { position: absolute; right: 5vw; bottom: 4.5rem; display: grid; text-align: right; color: #7f8ea1; font-size: .51rem; letter-spacing: .13em; }
+.stream-hero-index b { color: #dce9f8; font-size: .65rem; font-weight: 400; }
+.stream-catalog { position: relative; z-index: 2; padding: 2rem 0 clamp(7rem, 12vw, 11rem); background: linear-gradient(180deg, #02050a, #040a13 48%, #02050a); }
+.content-rail { margin-top: clamp(3.2rem, 6vw, 5.5rem); }
+.rail-heading { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 1.35rem; }
+.rail-heading > div { display: flex; align-items: baseline; gap: .8rem; }
+.rail-heading span { color: #52657d; font-size: .58rem; letter-spacing: .12em; }
+.rail-heading h2 { margin: 0; font-size: clamp(1.35rem, 2.2vw, 2.25rem); font-weight: 300; letter-spacing: -.04em; }
+.rail-heading > p { margin: 0; color: #65758a; font-size: .61rem; letter-spacing: .05em; text-transform: uppercase; }
+.stream-row {
+  display: grid; grid-auto-flow: column; grid-auto-columns: clamp(250px, 23vw, 360px); gap: 1rem;
+  padding: .65rem 5vw 1.5rem; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory;
+  scrollbar-width: thin; scrollbar-color: rgba(129,175,231,.38) transparent;
+}
+.stream-row::after { content: ""; width: calc(5vw - 1rem); }
+.stream-card {
+  position: relative; aspect-ratio: 16 / 9; overflow: hidden; scroll-snap-align: start; isolation: isolate;
+  padding: 0; border: 1px solid rgba(176,206,242,.12); border-radius: 5px; color: white;
+  background-color: #091321; background-repeat: no-repeat; cursor: pointer; text-align: left;
+  box-shadow: 0 14px 34px rgba(0,0,0,.22); transition: transform .42s var(--ease), border-color .3s, box-shadow .42s;
+}
+.stream-card::before {
+  content: ""; position: absolute; z-index: -1; inset: 0;
+  background: linear-gradient(0deg, rgba(1,4,9,.94) 0%, rgba(1,4,9,.25) 56%, rgba(1,4,9,.04) 100%);
+  transition: background .35s;
+}
+.stream-card:hover, .stream-card:focus-visible { z-index: 3; transform: scale(1.035) translateY(-4px); border-color: rgba(159,199,255,.65); box-shadow: 0 18px 44px rgba(0,0,0,.55), 0 0 25px rgba(76,141,226,.13); }
+.stream-card:hover::before { background: linear-gradient(0deg, rgba(1,4,9,.94) 0%, rgba(1,4,9,.12) 65%, transparent 100%); }
+.sprite-destinations { background-image: url("../assets/images/video-catalog/destinos-grid.jpg"); }
+.sprite-escapes { background-image: url("../assets/images/video-catalog/escapadas-grid.jpg"); }
+.sprite-experiences { background-image: url("../assets/images/video-catalog/experiencias-grid.jpg"); }
+.sprite-1, .sprite-2, .sprite-3, .sprite-4, .sprite-5, .sprite-6 { background-size: 306% 206%; }
+.sprite-1 { background-position: 0 0; }
+.sprite-2 { background-position: 50% 0; }
+.sprite-3 { background-position: 100% 0; }
+.sprite-4 { background-position: 0 100%; }
+.sprite-5 { background-position: 50% 100%; }
+.sprite-6 { background-position: 100% 100%; }
+.card-play {
+  position: absolute; top: 1rem; right: 1rem; width: 2.5rem; aspect-ratio: 1; display: grid; place-items: center;
+  padding-left: .12rem; border: 1px solid rgba(255,255,255,.65); border-radius: 50%; background: rgba(0,5,12,.35);
+  font-size: .65rem; backdrop-filter: blur(7px); opacity: .8; transform: scale(.9); transition: opacity .3s, transform .3s, background .3s;
+}
+.stream-card:hover .card-play, .stream-card:focus-visible .card-play { opacity: 1; transform: scale(1); background: rgba(49,111,190,.8); }
+.stream-card-copy { position: absolute; inset: auto 1rem .9rem; display: grid; gap: .2rem; }
+.stream-card-copy small { color: #9fb1c7; font-size: .51rem; letter-spacing: .08em; text-transform: uppercase; }
+.stream-card-copy strong { overflow: hidden; font-size: clamp(1.05rem, 1.5vw, 1.35rem); font-weight: 400; letter-spacing: -.025em; text-overflow: ellipsis; white-space: nowrap; }
+.stream-footer { border-top-color: rgba(173,207,248,.12); }
+.video-modal { position: fixed; z-index: 100; inset: 0; display: grid; place-items: center; padding: 1.2rem; }
+.video-modal[hidden] { display: none; }
+.video-modal-backdrop { position: absolute; inset: 0; background: rgba(0,3,8,.86); backdrop-filter: blur(13px); }
+.video-modal-panel {
+  position: relative; width: min(92vw, 850px); max-height: 90svh; overflow: auto; border: 1px solid rgba(159,199,255,.24);
+  border-radius: 7px; background: #07101c; box-shadow: 0 30px 100px rgba(0,0,0,.75); animation: modal-in .45s var(--ease);
+}
+.video-modal-close {
+  position: absolute; z-index: 3; top: 1rem; right: 1rem; width: 44px; height: 44px; border: 1px solid rgba(255,255,255,.35);
+  border-radius: 50%; color: white; background: rgba(0,4,10,.5); cursor: pointer; font-size: 1.4rem; font-weight: 200;
+}
+.video-modal-visual {
+  min-height: 270px; display: grid; place-items: center; overflow: hidden; background:
+    linear-gradient(0deg, #07101c 0%, transparent 55%),
+    url("../assets/images/video-catalog/hero-costa.jpg") center/cover no-repeat;
+}
+.modal-orbit { width: 5.5rem; aspect-ratio: 1; border: 1px solid rgba(255,255,255,.7); border-radius: 50%; box-shadow: 0 0 40px rgba(80,151,240,.28); }
+.video-modal-visual b { position: absolute; color: white; font-size: .65rem; letter-spacing: .12em; }
+.modal-player { position: absolute; z-index: 2; inset: 0; width: 100%; height: 100%; object-fit: cover; background: #02050a; }
+.modal-player:not([hidden]) ~ .modal-orbit, .modal-player:not([hidden]) ~ b { display: none; }
+.video-modal-copy { padding: clamp(1.6rem, 4vw, 3.5rem); }
+.video-modal-copy h2 { margin-bottom: 1rem; font-size: clamp(2.2rem, 5vw, 4.7rem); font-weight: 300; line-height: .95; letter-spacing: -.06em; }
+.video-modal-copy > p:not(.stream-label):not(.video-status) { max-width: 42rem; color: #a7b5c7; font-size: .82rem; line-height: 1.7; }
+.video-status { min-height: 1rem; margin: 1rem 0 0; color: var(--blue); font-size: .68rem; }
+@keyframes stream-drift { from { transform: scale(1.015); } to { transform: scale(1.055); } }
+@keyframes modal-in { from { opacity: 0; transform: translateY(18px) scale(.98); } to { opacity: 1; transform: none; } }
+
+@media (max-width: 900px) {
+  .stream-hero-index { display: none; }
+  .stream-row { grid-auto-columns: clamp(245px, 48vw, 330px); }
+}
+
+@media (max-width: 640px) {
+  .stream-hero { min-height: 790px; align-items: flex-end; }
+  .stream-hero-image { background-position: 72% center; }
+  .stream-hero-overlay { background: linear-gradient(180deg, rgba(2,5,10,.28), rgba(2,5,10,.36) 38%, #02050a 94%); }
+  .stream-stars { inset: 68px 6vw 0; }
+  .stream-hero-content { padding-bottom: 4.8rem; }
+  .video-home-return { margin-bottom: 4rem; }
+  .stream-hero h1 { font-size: clamp(3.55rem, 16.5vw, 4.7rem); line-height: .9; }
+  .stream-description { max-width: 21rem; }
+  .stream-actions { align-items: stretch; }
+  .stream-button { min-height: 48px; }
+  .stream-catalog { padding-top: .3rem; }
+  .rail-heading { display: block; }
+  .rail-heading > p { margin-top: .6rem; }
+  .stream-row { grid-auto-columns: 76vw; gap: .8rem; padding-inline: 6vw; }
+  .stream-row::after { width: calc(6vw - .8rem); }
+  .stream-card:hover, .stream-card:focus-visible { transform: translateY(-3px); }
+  .video-modal { padding: .65rem; }
+  .video-modal-visual { min-height: 210px; }
 }

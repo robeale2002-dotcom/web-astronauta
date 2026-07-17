@@ -62,3 +62,62 @@ document.querySelectorAll("video[autoplay]").forEach((video) => {
     video.setAttribute("controls", "");
   });
 });
+
+const videoModal = document.querySelector("[data-video-modal]");
+const videoModalPanel = videoModal?.querySelector("[role='dialog']");
+const videoModalTitle = videoModal?.querySelector("[data-modal-title]");
+const videoModalDescription = videoModal?.querySelector("[data-modal-description]");
+const videoStatus = videoModal?.querySelector("[data-video-status]");
+const modalPlayer = videoModal?.querySelector("[data-modal-player]");
+let videoModalTrigger = null;
+
+const closeVideoModal = () => {
+  if (!videoModal) return;
+  videoModal.hidden = true;
+  document.body.style.overflow = "";
+  if (videoStatus) videoStatus.textContent = "";
+  if (modalPlayer) {
+    modalPlayer.pause();
+    modalPlayer.removeAttribute("src");
+    modalPlayer.hidden = true;
+  }
+  videoModalTrigger?.focus();
+};
+
+document.querySelectorAll("[data-open-video]").forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+    if (!videoModal || !videoModalTitle || !videoModalDescription) return;
+    videoModalTrigger = trigger;
+    videoModalTitle.textContent = trigger.dataset.videoTitle || "Vídeo de viaje";
+    videoModalDescription.textContent =
+      trigger.dataset.videoDescription || "Descubre una nueva forma de mirar España.";
+    if (modalPlayer) {
+      const source = trigger.dataset.videoSrc;
+      if (source) {
+        modalPlayer.src = source;
+        modalPlayer.hidden = false;
+        modalPlayer.load();
+      } else {
+        modalPlayer.hidden = true;
+      }
+    }
+    videoModal.hidden = false;
+    document.body.style.overflow = "hidden";
+    videoModalPanel?.focus();
+  });
+});
+
+videoModal?.querySelectorAll("[data-close-video]").forEach((control) => {
+  control.addEventListener("click", closeVideoModal);
+});
+
+videoModal?.querySelector("[data-watch-video]")?.addEventListener("click", () => {
+  if (videoStatus) {
+    videoStatus.textContent =
+      "Estructura preparada: el episodio estará disponible próximamente.";
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && videoModal && !videoModal.hidden) closeVideoModal();
+});
